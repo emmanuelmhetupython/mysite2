@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="row">
+  <h2>Profile: </h2>
+  <div class="col s12 m12">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+
+        <span class="card-title">
+          Username : <a href="">{{ user.username }}</a>
+        </span>
+        <br>
+        <p>
+          Profile Pic :{{ user.profile_pic.url }}
+        </p><br>
+        <p>
+          My Email : {{ user.email }}
+        </p>
+        <br>
+        <p>
+          My FirstName :{{ user.first_name }}
+        </p><br>
+
+        <p>
+          My Surname :{{ user.last_name }}
+        </p>
+
+      </div>
+      <div class="card-action">
+        <a href="#">Delete</a>
+        <a href="/edit">Update Profile</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html"  %}
+
+{%  block content %}
+
+<div class="row">
+  <marquee>
+    <h4 style="color:crimson">What you can do with Python programming language</h4>
+  </marquee>
+
+  {% for cat in categories %}
+  <div class="col s12 m12 14">
+
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">
+          <h5>{{cat.tutorial_category }}</h5>
+        </span>
+        <p>{{cat.category_summary }}</p>
+      </div>
+
+      <div class="card-action">
+         <a href="/web-development">Learn More </a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+</div>
+
+
+
+{%  endblock %}

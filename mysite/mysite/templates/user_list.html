@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for used in users %}
+
+
+    <div class="row">
+            <div class="col s12 m12">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">    <a href="">{{ used.username }}</a></span>
+                  <p>
+                     Email : {{ used.email}}
+                  </p>
+                  <p>
+                    Title  :{{ used.last_name}}
+                    </p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Send Email</a>
+                  <a href="#">Make a call</a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    
+    {% endfor %}
+{% endblock %}
